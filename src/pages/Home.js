@@ -47,13 +47,13 @@ function Home() {
             search.result?.length > 0 ? (
               search.result?.map((game) => (
                 <div
-                  className="px-3 py-4 bg-white hover:border border-green-400 rounded-lg flex gap-2 justify-between items-center"
+                  className="px-3 py-4 bg-white hover:border border-green-400 rounded-lg flex gap-2 justify-between items-center flex-grow"
                   key={game?.appid}
                 >
                   <p>{game?.name}</p>
                   <Link
                     to={`/game/${game?.appid}`}
-                    className="text-center text-white bg-green-400 hover:bg-green-700 p-1 rounded-lg"
+                    className="text-center text-white bg-green-400 hover:bg-green-700 p-1 rounded-lg flex-shrink-0"
                   >
                     Check Out
                   </Link>

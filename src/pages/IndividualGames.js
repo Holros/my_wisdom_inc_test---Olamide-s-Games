@@ -31,6 +31,7 @@ const IndividualGames = () => {
       } catch (error) {
         if (error.response.status === 404 || error.response.status === 500) {
           setNotFound(true);
+          toast.dismiss()
           return;
         }
         const err = error.response ? error.response.data : error.message;
